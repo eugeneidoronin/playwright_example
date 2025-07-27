@@ -10,3 +10,4 @@ playwright/.auth
 mobile-tests/playwright.auth/
 
 /.idea/
+.env
