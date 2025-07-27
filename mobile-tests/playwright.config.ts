@@ -44,9 +44,9 @@ export default defineConfig({
             use: {
                 ...devices['Galaxy S24'],
                 //pick up the context
-                storageState: 'mobile-tests/playwright.auth/user.json',
+                storageState: 'playwright.auth/user.json',
             },
-          dependencies: ['setup'],
+            dependencies: ['setup'],
         },
 
         /* Test against mobile viewports. */
@@ -54,10 +54,16 @@ export default defineConfig({
         //   name: 'Mobile Chrome',
         //   use: { ...devices['Pixel 5'] },
         // },
-        // {
-        //   name: 'Mobile Safari',
-        //   use: { ...devices['iPhone 12'] },
-        // },
+        {
+           name: 'iPhone 12',
+           use: { ...devices['iPhone 12'],
+            //pick up the context
+            storageState: 'playwright.auth/user.json',
+            dependencies: ['setup'],
+            },
+           
+           
+        },
 
     ],
 
